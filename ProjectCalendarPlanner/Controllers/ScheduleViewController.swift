@@ -23,7 +23,7 @@ class ScheduleViewController: UIViewController {
        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Open calendar", for: .normal)
-        button.setTitleColor(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont(name: "Avinir Next Demi Bold", size: 14)
         return button
     }()
@@ -70,6 +70,14 @@ extension ScheduleViewController {
             calendar.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
             calendar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             calendar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+        ])
+        
+        view.addSubview(showHideButton)
+        NSLayoutConstraint.activate([
+            showHideButton.topAnchor.constraint(equalTo: calendar.bottomAnchor, constant: 0),
+            showHideButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            showHideButton.widthAnchor.constraint(equalToConstant: 150),
+            showHideButton.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 }
