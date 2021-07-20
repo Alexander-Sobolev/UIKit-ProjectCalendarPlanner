@@ -18,6 +18,15 @@ class ScheduleViewController: UIViewController {
         return calendar
         
     }()
+    
+    private let showHideButton : UIButton = {
+       let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Open calendar", for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont(name: "Avinir Next Demi Bold", size: 14)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
