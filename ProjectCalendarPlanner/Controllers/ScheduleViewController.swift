@@ -39,6 +39,13 @@ class ScheduleViewController: UIViewController {
             
         setupConstraints()
         
+        showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
+        
+    }
+    
+    @objc func showHideButtonTapped() {
+        
+        print("TAP")
     }
 
 }
