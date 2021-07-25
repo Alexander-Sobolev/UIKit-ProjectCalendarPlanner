@@ -30,9 +30,12 @@ class ScheduleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeAction()
+        calendar.scope = .week
         
         view.backgroundColor = .white
         title = "Schedule"
+        
         
         calendar.delegate = self
         calendar.dataSource = self
@@ -45,9 +48,40 @@ class ScheduleViewController: UIViewController {
     
     @objc func showHideButtonTapped() {
         
-        print("TAP")
+        if calendar.scope == .week {
+            calendar.setScope(.month, animated: true)
+            showHideButton.setTitle("Close calendar", for: .normal)
+        } else {
+            calendar.setScope(.week, animated: true)
+            showHideButton.setTitle("Open calendar", for: .normal)
+        }
     }
-
+    
+    // MARK: - SwipeRecognizer
+    
+    func swipeAction() {
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+        swipeUp.direction = .up
+        calendar.addGestureRecognizer(swipeUp)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+        swipeDown.direction = .down
+        calendar.addGestureRecognizer(swipeDown)
+        
+    }
+    
+    @objc func handleSwipe(gesture: UISwipeGestureRecognizer) {
+        
+        switch gesture.direction {
+        case .up:
+            showHideButtonTapped()
+        case .down:
+            showHideButtonTapped()
+        default:
+            break
+        }
+    }
 }
 
 // MARK: - FSCalendarDataSource, FSCalendarDelegate
@@ -58,6 +92,10 @@ extension ScheduleViewController: FSCalendarDataSource, FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         calendarHeight.constant = bounds.height
         view.layoutIfNeeded()
+    }
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print(date)
     }
 }
 
