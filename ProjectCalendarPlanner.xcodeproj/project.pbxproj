@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		B4C6AC0A26A6C33900F6247E /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6AC0926A6C33900F6247E /* ScheduleViewController.swift */; };
 		B4C6AC0C26A6C36200F6247E /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6AC0B26A6C36200F6247E /* TasksViewController.swift */; };
 		B4C6AC0E26A6C38900F6247E /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6AC0D26A6C38900F6247E /* ContactsViewController.swift */; };
+		B4F36BAC26AEE37F005B982B /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F36BAB26AEE37F005B982B /* ScheduleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B4C6AC0926A6C33900F6247E /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		B4C6AC0B26A6C36200F6247E /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		B4C6AC0D26A6C38900F6247E /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		B4F36BAB26AEE37F005B982B /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		C2E4459CD6502F39CB4175EA /* Pods-ProjectCalendarPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectCalendarPlanner.debug.xcconfig"; path = "Target Support Files/Pods-ProjectCalendarPlanner/Pods-ProjectCalendarPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +54,6 @@
 				C2E4459CD6502F39CB4175EA /* Pods-ProjectCalendarPlanner.debug.xcconfig */,
 				52811D88DD2D56AB46131786 /* Pods-ProjectCalendarPlanner.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,6 +80,7 @@
 			children = (
 				B4C6AC0526A6BD0D00F6247E /* Aplication */,
 				B4C6AC0726A6BD4800F6247E /* Controllers */,
+				B4F36BA926AEE33E005B982B /* Model */,
 				B4C6AC0826A6BD8000F6247E /* Resources */,
 			);
 			path = ProjectCalendarPlanner;
@@ -112,6 +114,22 @@
 				B4C6ABFF26A6BBF900F6247E /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4F36BA926AEE33E005B982B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4F36BAA26AEE34C005B982B /* Cell */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4F36BAA26AEE34C005B982B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4F36BAB26AEE37F005B982B /* ScheduleTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E9E2FD869524DE379CFF3E21 /* Frameworks */ = {
@@ -236,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C6ABF626A6BBF800F6247E /* MainTabBarController.swift in Sources */,
+				B4F36BAC26AEE37F005B982B /* ScheduleTableViewCell.swift in Sources */,
 				B4C6AC0C26A6C36200F6247E /* TasksViewController.swift in Sources */,
 				B4C6ABF226A6BBF800F6247E /* AppDelegate.swift in Sources */,
 				B4C6ABF426A6BBF800F6247E /* SceneDelegate.swift in Sources */,

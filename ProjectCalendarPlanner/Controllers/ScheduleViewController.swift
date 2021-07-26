@@ -27,6 +27,14 @@ class ScheduleViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "Avinir Next Demi Bold", size: 14)
         return button
     }()
+    
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
+    let idSheduleCill = "idSheduleCill"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +43,10 @@ class ScheduleViewController: UIViewController {
         
         view.backgroundColor = .white
         title = "Schedule"
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(ScheduleTableViewCell.self, forCellReuseIdentifier: idSheduleCill)
         
         
         calendar.delegate = self
@@ -84,6 +96,31 @@ class ScheduleViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
+extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: idSheduleCill, for: indexPath) as! ScheduleTableViewCell
+        cell.textLabel?.text = String(indexPath.row)
+//        switch indexPath.row {
+//        case 0: cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+//        case 1: cell.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+//        default: cell.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+//        }
+        return cell
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 80
+//    }
+    
+}
+
 // MARK: - FSCalendarDataSource, FSCalendarDelegate
 
 extension ScheduleViewController: FSCalendarDataSource, FSCalendarDelegate {
@@ -123,6 +160,15 @@ extension ScheduleViewController {
             showHideButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             showHideButton.widthAnchor.constraint(equalToConstant: 150),
             showHideButton.heightAnchor.constraint(equalToConstant: 20)
+        ])
+        
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: showHideButton.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            
         ])
     }
 }
