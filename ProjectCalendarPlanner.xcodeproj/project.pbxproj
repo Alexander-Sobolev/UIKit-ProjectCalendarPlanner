@@ -17,6 +17,8 @@
 		B4C6AC0A26A6C33900F6247E /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6AC0926A6C33900F6247E /* ScheduleViewController.swift */; };
 		B4C6AC0C26A6C36200F6247E /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6AC0B26A6C36200F6247E /* TasksViewController.swift */; };
 		B4C6AC0E26A6C38900F6247E /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6AC0D26A6C38900F6247E /* ContactsViewController.swift */; };
+		B4CF15F926B0839600B006D1 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF15F826B0839600B006D1 /* UILabel.swift */; };
+		B4CF15FB26B0881E00B006D1 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF15FA26B0881E00B006D1 /* UIFont.swift */; };
 		B4F36BAC26AEE37F005B982B /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F36BAB26AEE37F005B982B /* ScheduleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		B4C6AC0926A6C33900F6247E /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		B4C6AC0B26A6C36200F6247E /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		B4C6AC0D26A6C38900F6247E /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		B4CF15F826B0839600B006D1 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		B4CF15FA26B0881E00B006D1 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		B4F36BAB26AEE37F005B982B /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		C2E4459CD6502F39CB4175EA /* Pods-ProjectCalendarPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectCalendarPlanner.debug.xcconfig"; path = "Target Support Files/Pods-ProjectCalendarPlanner/Pods-ProjectCalendarPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				B4AE2B8526AF394E00B72827 /* UIStackView.swift */,
+				B4CF15F826B0839600B006D1 /* UILabel.swift */,
+				B4CF15FA26B0881E00B006D1 /* UIFont.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -276,9 +282,11 @@
 				B4F36BAC26AEE37F005B982B /* ScheduleTableViewCell.swift in Sources */,
 				B4C6AC0C26A6C36200F6247E /* TasksViewController.swift in Sources */,
 				B4AE2B8626AF394E00B72827 /* UIStackView.swift in Sources */,
+				B4CF15F926B0839600B006D1 /* UILabel.swift in Sources */,
 				B4C6ABF226A6BBF800F6247E /* AppDelegate.swift in Sources */,
 				B4C6ABF426A6BBF800F6247E /* SceneDelegate.swift in Sources */,
 				B4C6AC0A26A6C33900F6247E /* ScheduleViewController.swift in Sources */,
+				B4CF15FB26B0881E00B006D1 /* UIFont.swift in Sources */,
 				B4C6AC0E26A6C38900F6247E /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
