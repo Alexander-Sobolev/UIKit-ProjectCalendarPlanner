@@ -54,8 +54,14 @@ class ScheduleViewController: UIViewController {
             
         setupConstraints()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        
         showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
         
+    }
+    
+    @objc func addButtonTapped() {
+        print("TAP")
     }
     
     @objc func showHideButtonTapped() {
