@@ -20,10 +20,24 @@ class OptionsScheduleTableViewCell: UITableViewCell {
     let nameCellLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
-        label.text = "TAP"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    let repeatSwitch: UISwitch = {
+        let repeatSwitch = UISwitch()
+        repeatSwitch.isOn = true
+        repeatSwitch.isHidden = true
+        repeatSwitch.onTintColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        repeatSwitch.translatesAutoresizingMaskIntoConstraints = false
+        return repeatSwitch
+    }()
+    
+    let cellNameArray = [["Date", "Time"],
+                         ["Name", "Type", "Building", "Audiense"],
+                         ["Teacer Name"],
+                         [""],
+                         ["Repeat every 7 days"]]
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,6 +45,8 @@ class OptionsScheduleTableViewCell: UITableViewCell {
         self.setConstraints()
         self.selectionStyle = .none
         self.backgroundColor = .clear
+        
+        repeatSwitch.addTarget(self, action: #selector(switchChange(paramTarget:)), for: .valueChanged)
    
     }
     
@@ -38,7 +54,24 @@ class OptionsScheduleTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func cellConfigure(indexPath: IndexPath) {
+        nameCellLabel.text = cellNameArray[indexPath.section][indexPath.row]
+        
+        if indexPath == [3,0] {
+            backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        }
+        if indexPath == [4,0] {
+            repeatSwitch.isHidden = false
+        }
+    }
     
+    @objc func switchChange(paramTarget: UISwitch) {
+        if paramTarget.isOn {
+            print("ON")
+        } else {
+            print("OFF")
+        }
+    }
     
     func setConstraints() {
         
@@ -55,6 +88,12 @@ class OptionsScheduleTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             nameCellLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             nameCellLabel.leadingAnchor.constraint(equalTo: backgroundViewCell.leadingAnchor, constant: 15)
+        ])
+        
+        self.contentView.addSubview(repeatSwitch)
+        NSLayoutConstraint.activate([
+            repeatSwitch.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            repeatSwitch.trailingAnchor.constraint(equalTo: backgroundViewCell.trailingAnchor, constant: -20)
         ])
     }
 }

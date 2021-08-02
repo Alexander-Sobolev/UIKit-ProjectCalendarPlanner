@@ -24,11 +24,11 @@ class ScheduleTableViewCell: UITableViewCell {
     let lessonName = UILabel(text: "Программирование", font: .avenirNextDemiBold20())
     let teacherName =  UILabel(text: "Антонов Антон Антонович", font: .avenirNext20(), alignment: .right)
     let lessonTime = UILabel(text: "08:00", font: .avenirNextDemiBold20())
-    let typeLabel = UILabel(text: "Тип:", font: .avenirNext14(), alignment: .right)
+    let typeLabel = UILabel(text: "Type:", font: .avenirNext14(), alignment: .right)
     let lessoType = UILabel(text: "Лекция", font: .avenirNextDemiBold14())
-    let bildingLabel = UILabel(text: "Корпус:", font: .avenirNext14(), alignment: .right)
+    let bildingLabel = UILabel(text: "Building:", font: .avenirNext14(), alignment: .right)
     let lessonBilding = UILabel(text: "1", font: .avenirNextDemiBold14())
-    let audLabel = UILabel(text: "Аудитория:", font: .avenirNext14(), alignment: .right)
+    let audLabel = UILabel(text: "Audience:", font: .avenirNext14(), alignment: .right)
     let lessonAud = UILabel(text: "101", font: .avenirNextDemiBold14())
 
     
