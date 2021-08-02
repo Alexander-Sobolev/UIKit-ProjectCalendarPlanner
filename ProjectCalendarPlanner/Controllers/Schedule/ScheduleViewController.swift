@@ -31,6 +31,7 @@ class ScheduleViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.bounces = false
         return tableView
     }()
     
@@ -61,7 +62,9 @@ class ScheduleViewController: UIViewController {
     }
     
     @objc func addButtonTapped() {
-        print("TAP")
+        
+        let scheduleOption = OptionsScheduleTableViewController()
+        navigationController?.pushViewController(scheduleOption, animated: true)
     }
     
     @objc func showHideButtonTapped() {
@@ -113,11 +116,11 @@ extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idSheduleCill, for: indexPath) as! ScheduleTableViewCell
         
-        switch indexPath.row {
-        case 0: cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
-        case 1: cell.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-        default: cell.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
-        }
+//        switch indexPath.row {
+//        case 0: cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+//        case 1: cell.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+//        default: cell.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+//        }
         return cell
     }
     
