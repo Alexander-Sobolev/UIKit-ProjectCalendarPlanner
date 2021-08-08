@@ -10,6 +10,7 @@
 		2CAAD747548FDCD35467E8C4 /* Pods_ProjectCalendarPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D12B082F11EF5CF7F0CF2EB /* Pods_ProjectCalendarPlanner.framework */; };
 		B422EFA626B1D3CD00A3D997 /* OptionsScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422EFA526B1D3CD00A3D997 /* OptionsScheduleTableViewController.swift */; };
 		B4273C6F26B70E0200D0296D /* OptionsScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4273C6E26B70E0200D0296D /* OptionsScheduleTableViewCell.swift */; };
+		B458BE7726C07F7700C74719 /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B458BE7626C07F7700C74719 /* AlertDate.swift */; };
 		B460715126B8646700A4038F /* HeaderOptionScheduleTabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460715026B8646700A4038F /* HeaderOptionScheduleTabelView.swift */; };
 		B4A2DBAA26B6E28B00297323 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2DBA926B6E28B00297323 /* TasksTableViewCell.swift */; };
 		B4A2DBAD26B6EF9300297323 /* PressButtonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2DBAC26B6EF9300297323 /* PressButtonProtocols.swift */; };
@@ -32,6 +33,7 @@
 		52811D88DD2D56AB46131786 /* Pods-ProjectCalendarPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectCalendarPlanner.release.xcconfig"; path = "Target Support Files/Pods-ProjectCalendarPlanner/Pods-ProjectCalendarPlanner.release.xcconfig"; sourceTree = "<group>"; };
 		B422EFA526B1D3CD00A3D997 /* OptionsScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScheduleTableViewController.swift; sourceTree = "<group>"; };
 		B4273C6E26B70E0200D0296D /* OptionsScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		B458BE7626C07F7700C74719 /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
 		B460715026B8646700A4038F /* HeaderOptionScheduleTabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOptionScheduleTabelView.swift; sourceTree = "<group>"; };
 		B4A2DBA926B6E28B00297323 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		B4A2DBAC26B6EF9300297323 /* PressButtonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressButtonProtocols.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 				52811D88DD2D56AB46131786 /* Pods-ProjectCalendarPlanner.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B458BE7326C07F2A00C74719 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				B458BE7626C07F7700C74719 /* AlertDate.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		B4A2DBA326B6DCFE00297323 /* Schedule */ = {
@@ -213,6 +223,7 @@
 		B4F36BA926AEE33E005B982B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B458BE7326C07F2A00C74719 /* Alert */,
 				B4F36BAA26AEE34C005B982B /* Cell */,
 			);
 			path = Model;
@@ -349,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B458BE7726C07F7700C74719 /* AlertDate.swift in Sources */,
 				B4A2DBAA26B6E28B00297323 /* TasksTableViewCell.swift in Sources */,
 				B4C6ABF626A6BBF800F6247E /* MainTabBarController.swift in Sources */,
 				B422EFA626B1D3CD00A3D997 /* OptionsScheduleTableViewController.swift in Sources */,
