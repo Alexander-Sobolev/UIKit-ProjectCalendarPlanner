@@ -12,6 +12,7 @@ class OptionsScheduleTableViewController: UITableViewController {
     let idOptions = "idOptions"
     let idOptionsHeader = "idOptionsHeader"
     
+    let headerNameArray = ["DATE AND TIME", "LESSON", "TEACHER", "COLOR", "PERIOD"]
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,9 @@ class OptionsScheduleTableViewController: UITableViewController {
         tableView.dataSource = self
         tableView.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)
         tableView.separatorStyle = .none
+        tableView.bounces = false
         tableView.register(OptionsScheduleTableViewCell.self, forCellReuseIdentifier: idOptions)
-        tableView.register(HeaderOptionScheduleTabelView.self, forHeaderFooterViewReuseIdentifier: idOptionsHeader)
+        tableView.register(HeaderOptionsTabelView.self, forHeaderFooterViewReuseIdentifier: idOptionsHeader)
         
         title = "Option Schedule"
         
@@ -53,8 +55,8 @@ class OptionsScheduleTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idOptionsHeader) as! HeaderOptionScheduleTabelView
-        header.headerConfigure(section: section)
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idOptionsHeader) as! HeaderOptionsTabelView
+        header.headerConfigure(nameArray: headerNameArray, section: section)
         return header
     }
     
@@ -69,8 +71,23 @@ class OptionsScheduleTableViewController: UITableViewController {
         case [0,0]: alertDate(label: cell.nameCellLabel) { (numberWeekday, date) in
             print(numberWeekday, date)
         }
+        case [0,1]: alertTime(label: cell.nameCellLabel) { (date) in
+            print(date)
+        }
+        case [1,0]: alertForCellName(label: cell.nameCellLabel, name: "Name lesson", placeholder: "Enter name lesson")
+        case [1,1]: alertForCellName(label: cell.nameCellLabel, name:"Type lesson", placeholder: "Enter type lesson")
+        case [1,2]: alertForCellName(label: cell.nameCellLabel, name: "Building number", placeholder: "Enter number of building")
+        case [1,3]: alertForCellName(label: cell.nameCellLabel, name: "Audience number", placeholder: "Enter number of audience")
+        case [2,0]: pushControllers(vc: TeachersViewController())
+        case [3,0]: pushControllers(vc: ScheduleColorViewController())
         default:
-            print("Error")
+            print("Tap OptionsTabelView")
+        }
+        
+        func pushControllers(vc: UIViewController) {
+            let viewController = vc
+            navigationController?.navigationBar.topItem?.title = "Options"
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }
