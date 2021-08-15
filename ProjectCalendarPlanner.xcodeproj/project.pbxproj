@@ -16,6 +16,10 @@
 		B459B20026C30D6D00A3815C /* ScheduleColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459B1FF26C30D6D00A3815C /* ScheduleColorViewController.swift */; };
 		B459B20226C30DB500A3815C /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459B20126C30DB500A3815C /* TeachersViewController.swift */; };
 		B460715126B8646700A4038F /* HeaderOptionsTabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460715026B8646700A4038F /* HeaderOptionsTabelView.swift */; };
+		B481768626C9532A007C72D1 /* ColorTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B481768526C9532A007C72D1 /* ColorTabelViewCell.swift */; };
+		B481768826C9564F007C72D1 /* TaskOptionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B481768726C9564F007C72D1 /* TaskOptionTableView.swift */; };
+		B481768A26C957F2007C72D1 /* OptionsTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B481768926C957F2007C72D1 /* OptionsTaskTableViewCell.swift */; };
+		B481768C26C97920007C72D1 /* ColorTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B481768B26C97920007C72D1 /* ColorTaskTableViewController.swift */; };
 		B4A2DBAA26B6E28B00297323 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2DBA926B6E28B00297323 /* TasksTableViewCell.swift */; };
 		B4A2DBAD26B6EF9300297323 /* PressButtonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2DBAC26B6EF9300297323 /* PressButtonProtocols.swift */; };
 		B4AE2B8626AF394E00B72827 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AE2B8526AF394E00B72827 /* UIStackView.swift */; };
@@ -43,6 +47,10 @@
 		B459B1FF26C30D6D00A3815C /* ScheduleColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleColorViewController.swift; sourceTree = "<group>"; };
 		B459B20126C30DB500A3815C /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
 		B460715026B8646700A4038F /* HeaderOptionsTabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOptionsTabelView.swift; sourceTree = "<group>"; };
+		B481768526C9532A007C72D1 /* ColorTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTabelViewCell.swift; sourceTree = "<group>"; };
+		B481768726C9564F007C72D1 /* TaskOptionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOptionTableView.swift; sourceTree = "<group>"; };
+		B481768926C957F2007C72D1 /* OptionsTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTaskTableViewCell.swift; sourceTree = "<group>"; };
+		B481768B26C97920007C72D1 /* ColorTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTaskTableViewController.swift; sourceTree = "<group>"; };
 		B4A2DBA926B6E28B00297323 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		B4A2DBAC26B6EF9300297323 /* PressButtonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressButtonProtocols.swift; sourceTree = "<group>"; };
 		B4AE2B8526AF394E00B72827 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
@@ -107,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				B4C6AC0B26A6C36200F6247E /* TasksViewController.swift */,
+				B481768726C9564F007C72D1 /* TaskOptionTableView.swift */,
+				B481768B26C97920007C72D1 /* ColorTaskTableViewController.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -133,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				B4A2DBA926B6E28B00297323 /* TasksTableViewCell.swift */,
+				B481768926C957F2007C72D1 /* OptionsTaskTableViewCell.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				B460715026B8646700A4038F /* HeaderOptionsTabelView.swift */,
+				B481768526C9532A007C72D1 /* ColorTabelViewCell.swift */,
 				B4A2DBA626B6E1D300297323 /* Schedule */,
 				B4A2DBA726B6E1F200297323 /* Tasks */,
 				B4A2DBA826B6E20200297323 /* Contacts */,
@@ -375,18 +387,22 @@
 				B458BE7726C07F7700C74719 /* AlertDate.swift in Sources */,
 				B4A2DBAA26B6E28B00297323 /* TasksTableViewCell.swift in Sources */,
 				B4C6ABF626A6BBF800F6247E /* MainTabBarController.swift in Sources */,
+				B481768826C9564F007C72D1 /* TaskOptionTableView.swift in Sources */,
 				B422EFA626B1D3CD00A3D997 /* OptionsScheduleTableViewController.swift in Sources */,
 				B4F36BAC26AEE37F005B982B /* ScheduleTableViewCell.swift in Sources */,
 				B459B20226C30DB500A3815C /* TeachersViewController.swift in Sources */,
 				B459B1FE26C3090600A3815C /* AlertForCellName.swift in Sources */,
 				B4C6AC0C26A6C36200F6247E /* TasksViewController.swift in Sources */,
+				B481768626C9532A007C72D1 /* ColorTabelViewCell.swift in Sources */,
 				B4A2DBAD26B6EF9300297323 /* PressButtonProtocols.swift in Sources */,
 				B4AE2B8626AF394E00B72827 /* UIStackView.swift in Sources */,
 				B459B1FC26C3061F00A3815C /* AlertTime.swift in Sources */,
 				B4CF15F926B0839600B006D1 /* UILabel.swift in Sources */,
+				B481768C26C97920007C72D1 /* ColorTaskTableViewController.swift in Sources */,
 				B4C6ABF226A6BBF800F6247E /* AppDelegate.swift in Sources */,
 				B4C6ABF426A6BBF800F6247E /* SceneDelegate.swift in Sources */,
 				B4C6AC0A26A6C33900F6247E /* ScheduleViewController.swift in Sources */,
+				B481768A26C957F2007C72D1 /* OptionsTaskTableViewCell.swift in Sources */,
 				B4273C6F26B70E0200D0296D /* OptionsScheduleTableViewCell.swift in Sources */,
 				B4CF15FB26B0881E00B006D1 /* UIFont.swift in Sources */,
 				B4C6AC0E26A6C38900F6247E /* ContactsViewController.swift in Sources */,
