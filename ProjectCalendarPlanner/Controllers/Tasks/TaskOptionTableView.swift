@@ -13,6 +13,8 @@ class TaskOptionTableView: UITableViewController {
     let idOptionsHeader = "idOptionsHeader"
     
     let headerNameArray = ["DATE", "LESSON", "TASK", "COLOR"]
+    
+    let cellNameArray = ["Date", "Lesson", "Task", ""]
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,7 @@ class TaskOptionTableView: UITableViewController {
         tableView.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)
         tableView.separatorStyle = .none
         tableView.bounces = false
-        tableView.register(OptionsTaskTableViewCell.self, forCellReuseIdentifier: idOptionsTask)
+        tableView.register(OptionsTableViewCell.self, forCellReuseIdentifier: idOptionsTask)
         tableView.register(HeaderOptionsTabelView.self, forHeaderFooterViewReuseIdentifier: idOptionsHeader)
         
         title = "Options Tasks"
@@ -38,8 +40,8 @@ class TaskOptionTableView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsTask, for: indexPath) as! OptionsTaskTableViewCell
-        cell.cellConfigure(indexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsTask, for: indexPath) as! OptionsTableViewCell
+        cell.cellTasksConfigure(nameArray: cellNameArray, indexPath: indexPath)
         return cell
     }
     
@@ -59,7 +61,7 @@ class TaskOptionTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        let cell = tableView.cellForRow(at: indexPath) as! OptionsTaskTableViewCell
+        let cell = tableView.cellForRow(at: indexPath) as! OptionsTableViewCell
         switch indexPath.section {
         case 0: alertDate(label: cell.nameCellLabel) { (numberWeekday, date) in
             print(numberWeekday, date) }
