@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PressReadyTaskButtonProtocol: AnyObject {
-    func readyButtonTapped(indexPath: IndexPath) 
+    func readyButtonTapped(indexPath: IndexPath)   
 }
