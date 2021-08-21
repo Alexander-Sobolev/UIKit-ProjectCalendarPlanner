@@ -9,12 +9,13 @@ import UIKit
 
 class OptionsTableViewCell: UITableViewCell {
     
-    let backgroundViewCell: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.layer.cornerRadius = 10
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    let backgroundViewCell: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .white
+        imageView.layer.cornerRadius = 10
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     let nameCellLabel: UILabel = {
@@ -32,7 +33,6 @@ class OptionsTableViewCell: UITableViewCell {
         repeatSwitch.translatesAutoresizingMaskIntoConstraints = false
         return repeatSwitch
     }()
-    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -66,6 +66,12 @@ class OptionsTableViewCell: UITableViewCell {
         if indexPath == [3,0] {
             backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
         }
+    }
+    
+    func cellContactsConfigure(nameArray: [String], indexPath: IndexPath) {
+        nameCellLabel.text = nameArray[indexPath.section]
+        
+        indexPath.section == 4 ? backgroundViewCell.image = UIImage(systemName: "person.fill.badge.plus") : nil
     }
     
     @objc func switchChange(paramTarget: UISwitch) {
