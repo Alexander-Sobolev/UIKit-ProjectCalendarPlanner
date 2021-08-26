@@ -1,5 +1,5 @@
 //
-//  PhotoAlert.swift
+//  AlertPhoto.swift
 //  ProjectCalendarPlanner
 //
 //  Created by Alexander Sobolev on 25.08.2021.

@@ -34,7 +34,7 @@ class ContactsTableViewController: UITableViewController {
     
     @objc func addButtonTapped() {
         
-        let contactOption = ContactOptionTableViewController()
+        let contactOption = ContactsOptionsTableViewController()
         navigationController?.pushViewController(contactOption, animated: true)
     }
     

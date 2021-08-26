@@ -7,10 +7,10 @@
 
 import UIKit
 
-class OptionsScheduleTableViewController: UITableViewController {
+class ScheduleOptionsTableViewController: UITableViewController {
     
-    let idOptions = "idOptions"
-    let idOptionsHeader = "idOptionsHeader"
+    private let idOptions = "idOptions"
+    private let idOptionsHeader = "idOptionsHeader"
     
     let headerNameArray = ["DATE AND TIME", "LESSON", "TEACHER", "COLOR", "PERIOD"]
     
@@ -31,7 +31,7 @@ class OptionsScheduleTableViewController: UITableViewController {
         tableView.register(OptionsTableViewCell.self, forCellReuseIdentifier: idOptions)
         tableView.register(HeaderOptionsTabelView.self, forHeaderFooterViewReuseIdentifier: idOptionsHeader)
         
-        title = "Option Schedule"
+        title = "Options Schedule"
         
     }
     
@@ -85,7 +85,7 @@ class OptionsScheduleTableViewController: UITableViewController {
         case [1,2]: alertForCellName(label: cell.nameCellLabel, name: "Building number", placeholder: "Enter number of building")
         case [1,3]: alertForCellName(label: cell.nameCellLabel, name: "Audience number", placeholder: "Enter number of audience")
         case [2,0]: pushControllers(vc: TeachersViewController())
-        case [3,0]: pushControllers(vc: ScheduleColorViewController())
+        case [3,0]: pushControllers(vc: ScheduleColorsViewController())
         default:
             print("Tap OptionsTabelView")
         }

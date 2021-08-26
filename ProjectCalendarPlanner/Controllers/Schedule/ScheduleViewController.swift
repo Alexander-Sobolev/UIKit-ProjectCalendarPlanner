@@ -10,7 +10,7 @@ import FSCalendar
 
 class ScheduleViewController: UIViewController {
     
-    var calendarHeight: NSLayoutConstraint!
+    private var calendarHeight: NSLayoutConstraint!
     
     private var calendar: FSCalendar = {
         let calendar = FSCalendar()
@@ -35,7 +35,7 @@ class ScheduleViewController: UIViewController {
         return tableView
     }()
     
-    let idSheduleCill = "idSheduleCill"
+    private let idSheduleCill = "idSheduleCill"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,13 +63,13 @@ class ScheduleViewController: UIViewController {
         
     }
     
-    @objc func addButtonTapped() {
+    @objc private func addButtonTapped() {
         
-        let scheduleOption = OptionsScheduleTableViewController()
+        let scheduleOption = ScheduleOptionsTableViewController()
         navigationController?.pushViewController(scheduleOption, animated: true)
     }
     
-    @objc func showHideButtonTapped() {
+    @objc private func showHideButtonTapped() {
         
         if calendar.scope == .week {
             calendar.setScope(.month, animated: true)
@@ -82,7 +82,7 @@ class ScheduleViewController: UIViewController {
     
     // MARK: - SwipeRecognizer
     
-    func swipeAction() {
+    private func swipeAction() {
         
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
         swipeUp.direction = .up
@@ -94,7 +94,7 @@ class ScheduleViewController: UIViewController {
         
     }
     
-    @objc func handleSwipe(gesture: UISwipeGestureRecognizer) {
+    @objc private func handleSwipe(gesture: UISwipeGestureRecognizer) {
         
         switch gesture.direction {
         case .up:

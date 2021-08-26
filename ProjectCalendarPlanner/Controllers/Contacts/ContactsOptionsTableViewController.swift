@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactOptionTableViewController: UITableViewController {
+class ContactsOptionsTableViewController: UITableViewController {
     
     let idOptionsContact = "idOptionsContact"
     let idOptionsContactHeader = "idOptionsContactHeader"
@@ -86,7 +86,7 @@ class ContactOptionTableViewController: UITableViewController {
     }
 }
 
-extension ContactOptionTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ContactsOptionsTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func chooseImagePicer(sourse: UIImagePickerController.SourceType) {
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ColorTaskTableViewController: UITableViewController {
+class TaskColorsTableViewController: UITableViewController {
     
     let idTaskOptionsColor = "idTaskOptionsColor"
     let idTaskOptionsHeader = "idTaskOptionsHeader"
@@ -22,7 +22,7 @@ class ColorTaskTableViewController: UITableViewController {
         tableView.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)
         tableView.separatorStyle = .none
         tableView.bounces = false
-        tableView.register(ColorTabelViewCell.self, forCellReuseIdentifier: idTaskOptionsColor)
+        tableView.register(ColorsTabelViewCell.self, forCellReuseIdentifier: idTaskOptionsColor)
         tableView.register(HeaderOptionsTabelView.self, forHeaderFooterViewReuseIdentifier: idTaskOptionsHeader)
         
         title = "Color Tasks"
@@ -38,7 +38,7 @@ class ColorTaskTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: idTaskOptionsColor, for: indexPath) as! ColorTabelViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: idTaskOptionsColor, for: indexPath) as! ColorsTabelViewCell
         cell.cellConfigure(indexPath: indexPath)
         return cell
     }
