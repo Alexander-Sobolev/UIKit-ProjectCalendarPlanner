@@ -15,6 +15,8 @@
 		B42984C826D8037400CE6BB3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B42984C726D8037400CE6BB3 /* Realm */; };
 		B42984CA26D8037400CE6BB3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B42984C926D8037400CE6BB3 /* RealmSwift */; };
 		B454F8EF26D6B35200F56B33 /* AlertPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454F8EE26D6B35200F56B33 /* AlertPhoto.swift */; };
+		B4565F6326D954ED006787EA /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4565F6226D954ED006787EA /* ScheduleModel.swift */; };
+		B4565F6626D95878006787EA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4565F6526D95878006787EA /* RealmManager.swift */; };
 		B458BE7726C07F7700C74719 /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B458BE7626C07F7700C74719 /* AlertDate.swift */; };
 		B459B1FC26C3061F00A3815C /* AlertTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459B1FB26C3061F00A3815C /* AlertTime.swift */; };
 		B459B1FE26C3090600A3815C /* AlertForCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459B1FD26C3090600A3815C /* AlertForCellName.swift */; };
@@ -49,6 +51,8 @@
 		B422EFA526B1D3CD00A3D997 /* ScheduleOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleOptionsTableViewController.swift; sourceTree = "<group>"; };
 		B4273C6E26B70E0200D0296D /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
 		B454F8EE26D6B35200F56B33 /* AlertPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPhoto.swift; sourceTree = "<group>"; };
+		B4565F6226D954ED006787EA /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		B4565F6526D95878006787EA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		B458BE7626C07F7700C74719 /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
 		B459B1FB26C3061F00A3815C /* AlertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTime.swift; sourceTree = "<group>"; };
 		B459B1FD26C3090600A3815C /* AlertForCellName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertForCellName.swift; sourceTree = "<group>"; };
@@ -99,6 +103,22 @@
 				52811D88DD2D56AB46131786 /* Pods-ProjectCalendarPlanner.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4565F6126D954A8006787EA /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				B4565F6226D954ED006787EA /* ScheduleModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		B4565F6426D95835006787EA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B4565F6526D95878006787EA /* RealmManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B458BE7326C07F2A00C74719 /* Alert */ = {
@@ -216,7 +236,8 @@
 			children = (
 				B4C6AC0526A6BD0D00F6247E /* Aplication */,
 				B4C6AC0726A6BD4800F6247E /* Controllers */,
-				B4F36BA926AEE33E005B982B /* Model */,
+				B4F36BA926AEE33E005B982B /* Models */,
+				B4565F6426D95835006787EA /* Services */,
 				B4AE2B8326AF390800B72827 /* Extentions */,
 				B4A2DBAB26B6EF5B00297323 /* Protocols */,
 				B4C6AC0826A6BD8000F6247E /* Resources */,
@@ -254,13 +275,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B4F36BA926AEE33E005B982B /* Model */ = {
+		B4F36BA926AEE33E005B982B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B4565F6126D954A8006787EA /* Realm */,
 				B458BE7326C07F2A00C74719 /* Alert */,
 				B4F36BAA26AEE34C005B982B /* Cell */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B4F36BAA26AEE34C005B982B /* Cell */ = {
@@ -412,11 +434,13 @@
 				B454F8EF26D6B35200F56B33 /* AlertPhoto.swift in Sources */,
 				B422EFA626B1D3CD00A3D997 /* ScheduleOptionsTableViewController.swift in Sources */,
 				B4F36BAC26AEE37F005B982B /* ScheduleTableViewCell.swift in Sources */,
+				B4565F6326D954ED006787EA /* ScheduleModel.swift in Sources */,
 				B459B20226C30DB500A3815C /* TeachersViewController.swift in Sources */,
 				B459B1FE26C3090600A3815C /* AlertForCellName.swift in Sources */,
 				B4B2F5A426CEA723007DABAD /* ContactsTableViewCell.swift in Sources */,
 				B4C6AC0C26A6C36200F6247E /* TasksViewController.swift in Sources */,
 				B481768626C9532A007C72D1 /* ColorsTabelViewCell.swift in Sources */,
+				B4565F6626D95878006787EA /* RealmManager.swift in Sources */,
 				B4A2DBAD26B6EF9300297323 /* PressButtonProtocols.swift in Sources */,
 				B4AE2B8626AF394E00B72827 /* UIStackView.swift in Sources */,
 				B459B1FC26C3061F00A3815C /* AlertTime.swift in Sources */,
