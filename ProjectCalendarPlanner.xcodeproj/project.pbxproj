@@ -40,6 +40,12 @@
 		B4C6AC0C26A6C36200F6247E /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6AC0B26A6C36200F6247E /* TasksViewController.swift */; };
 		B4CF15F926B0839600B006D1 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF15F826B0839600B006D1 /* UILabel.swift */; };
 		B4CF15FB26B0881E00B006D1 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF15FA26B0881E00B006D1 /* UIFont.swift */; };
+		B4D8ED2826F8DE0E00BDBFE7 /* Screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D8ED2226F8DE0E00BDBFE7 /* Screen2.png */; };
+		B4D8ED2926F8DE0E00BDBFE7 /* Screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D8ED2326F8DE0E00BDBFE7 /* Screen1.png */; };
+		B4D8ED2A26F8DE0E00BDBFE7 /* Screen3.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D8ED2426F8DE0E00BDBFE7 /* Screen3.png */; };
+		B4D8ED2B26F8DE0E00BDBFE7 /* Screen4.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D8ED2526F8DE0E00BDBFE7 /* Screen4.png */; };
+		B4D8ED2C26F8DE0E00BDBFE7 /* Screen5.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D8ED2626F8DE0E00BDBFE7 /* Screen5.png */; };
+		B4D8ED2D26F8DE0E00BDBFE7 /* Screen6.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D8ED2726F8DE0E00BDBFE7 /* Screen6.png */; };
 		B4F36BAC26AEE37F005B982B /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F36BAB26AEE37F005B982B /* ScheduleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +84,12 @@
 		B4C6AC0B26A6C36200F6247E /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		B4CF15F826B0839600B006D1 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		B4CF15FA26B0881E00B006D1 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		B4D8ED2226F8DE0E00BDBFE7 /* Screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen2.png; sourceTree = "<group>"; };
+		B4D8ED2326F8DE0E00BDBFE7 /* Screen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen1.png; sourceTree = "<group>"; };
+		B4D8ED2426F8DE0E00BDBFE7 /* Screen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen3.png; sourceTree = "<group>"; };
+		B4D8ED2526F8DE0E00BDBFE7 /* Screen4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen4.png; sourceTree = "<group>"; };
+		B4D8ED2626F8DE0E00BDBFE7 /* Screen5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen5.png; sourceTree = "<group>"; };
+		B4D8ED2726F8DE0E00BDBFE7 /* Screen6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen6.png; sourceTree = "<group>"; };
 		B4F36BAB26AEE37F005B982B /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		C2E4459CD6502F39CB4175EA /* Pods-ProjectCalendarPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectCalendarPlanner.debug.xcconfig"; path = "Target Support Files/Pods-ProjectCalendarPlanner/Pods-ProjectCalendarPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +246,7 @@
 		B4C6ABF026A6BBF800F6247E /* ProjectCalendarPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				B4D8ED2126F8DCEC00BDBFE7 /* Screen */,
 				B4C6AC0526A6BD0D00F6247E /* Aplication */,
 				B4C6AC0726A6BD4800F6247E /* Controllers */,
 				B4F36BA926AEE33E005B982B /* Models */,
@@ -273,6 +286,19 @@
 				B4C6ABFF26A6BBF900F6247E /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4D8ED2126F8DCEC00BDBFE7 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B4D8ED2326F8DE0E00BDBFE7 /* Screen1.png */,
+				B4D8ED2226F8DE0E00BDBFE7 /* Screen2.png */,
+				B4D8ED2426F8DE0E00BDBFE7 /* Screen3.png */,
+				B4D8ED2526F8DE0E00BDBFE7 /* Screen4.png */,
+				B4D8ED2626F8DE0E00BDBFE7 /* Screen5.png */,
+				B4D8ED2726F8DE0E00BDBFE7 /* Screen6.png */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		B4F36BA926AEE33E005B982B /* Models */ = {
@@ -373,7 +399,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C6ABFE26A6BBF900F6247E /* LaunchScreen.storyboard in Resources */,
+				B4D8ED2826F8DE0E00BDBFE7 /* Screen2.png in Resources */,
+				B4D8ED2A26F8DE0E00BDBFE7 /* Screen3.png in Resources */,
+				B4D8ED2C26F8DE0E00BDBFE7 /* Screen5.png in Resources */,
+				B4D8ED2D26F8DE0E00BDBFE7 /* Screen6.png in Resources */,
 				B4C6ABFB26A6BBF900F6247E /* Assets.xcassets in Resources */,
+				B4D8ED2B26F8DE0E00BDBFE7 /* Screen4.png in Resources */,
+				B4D8ED2926F8DE0E00BDBFE7 /* Screen1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
